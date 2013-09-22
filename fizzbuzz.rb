@@ -1,16 +1,19 @@
 RANGE = 1..100
 
-# First, converts the number to a float, then divides it by 3.0.
-# If the result is a whole number (e.g. 3.0 / 3.0 #=> 1.0), then it is divisible.
-# If the number is not whole (e.g. 7.0 / 3.0 #=> 2.3333....) then it is not.
-# Returns true or false.
 def divisible_by_three?(number)
-  result = (number.to_f / 3.0)
-  represents_a_whole_number?(result)
+  divisible_by?(number, 3)
 end
 
 def divisible_by_five?(number)
-  result = (number.to_f / 5.0)
+  divisible_by?(number, 5)
+end
+
+# Converts two numbers into floats and divides one by the other.
+# If the result is a whole number (e.g. 3.0 / 3.0 #=> 1.0), then it is divisible.
+# If the number is not whole (e.g. 7.0 / 3.0 #=> 2.3333....) then it is not.
+# Returns true or false.
+def divisible_by?(number, divisor)
+  result = (number.to_f / divisor.to_f)
   represents_a_whole_number?(result)
 end
 

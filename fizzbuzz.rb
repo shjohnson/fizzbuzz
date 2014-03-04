@@ -8,6 +8,10 @@ def divisible_by_five?(number)
   divisible_by?(number, 5)
 end
 
+def divisible_by_fifteen?(number)
+  divisible_by?(number, 15)
+end
+
 # Converts two numbers into floats and divides one by the other.
 # If the result is a whole number (e.g. 3.0 / 3.0 #=> 1.0), then it is divisible.
 # If the number is not whole (e.g. 7.0 / 3.0 #=> 2.3333....) then it is not.
@@ -28,7 +32,9 @@ end
 
 RANGE.each do |number|
 
-  if divisible_by_three?(number)
+  if divisible_by_fifteen?(number)
+    output = "fizzbuzz"
+  elsif divisible_by_three?(number)
     output = "fizz"
   elsif divisible_by_five?(number)
     output = "buzz"

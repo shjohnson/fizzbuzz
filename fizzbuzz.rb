@@ -1,4 +1,4 @@
-RANGE = 1..100
+RANGE = 1..1000
 
 def divisible_by_three?(number)
   divisible_by?(number, 3)
